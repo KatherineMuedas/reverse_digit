@@ -9,24 +9,6 @@ describe ReverseDigit do
     assert_equal 2, result
   end
 
-  it 'should extract rightmost digit' do
-    rd = ReverseDigit.new(1)
-    result = rd.extract_right_digit
-    assert_equal 1, result
-  end
-
-  it 'should extract rightmost digit for two digit numbers' do
-    rd = ReverseDigit.new(15)
-    result = rd.extract_right_digit
-    assert_equal 5, result
-  end
-
-  it 'should extract rightmost digit for three digit numbers' do
-    rd = ReverseDigit.new(157)
-    result = rd.extract_right_digit
-    assert_equal 7, result
-  end
-
   it 'should return the reversed number for a two-digit number' do
     rd = ReverseDigit.new(23)
     result = rd.reverse
@@ -37,5 +19,11 @@ describe ReverseDigit do
     rd = ReverseDigit.new(456)
     result = rd.reverse
     assert_equal 654, result
+  end
+
+  it 'should return 51897 for 79815' do
+    rd = ReverseDigit.new(51897)
+    result = rd.reverse
+    assert_equal 79815, result
   end
 end
