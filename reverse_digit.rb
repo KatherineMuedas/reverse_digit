@@ -10,11 +10,11 @@ class ReverseDigit
   end
 
   def reverse
-    reversed_digit = @n
+    reversed_digit = extract_right_digit
     while (@n / 10) > 0
       extracted_digit = extract_right_digit
       @n = @n / 10
-      reversed_digit = (extracted_digit * 10) + extract_right_digit
+      reversed_digit = (reversed_digit * 10) + extract_right_digit
     end
     reversed_digit
   end
