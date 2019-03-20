@@ -9,4 +9,9 @@ describe ReverseDigit do
     assert_equal 2, result
   end
 
+  it 'should return the reversed number for a two-digit number' do
+    rd = ReverseDigit.new(23)
+    result = rd.reverse
+    assert_equal 32, result
+  end
 end

@@ -10,6 +10,11 @@ class ReverseDigit
   end
 
   def reverse
-    @n
+    result = @n % 10
+    while (@n / 10) > 0
+      result = (result * 10) + (@n / 10)
+      @n = @n /10
+    end
+    result
   end
 end
